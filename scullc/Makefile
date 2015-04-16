@@ -9,7 +9,7 @@ else
   DEBFLAGS = -O2
 endif
 
-CFLAGS += $(DEBFLAGS) -I$(LDDINC)
+EXTRA_CFLAGS += $(DEBFLAGS) -I$(LDDINC)
 
 TARGET = scullc
 
@@ -21,7 +21,7 @@ obj-m	:= scullc.o
 
 else
 
-KERNELDIR ?= /lib/modules/$(shell uname -r)/build
+KERNELDIR ?= /home/likai/Sourcecode/linux
 PWD       := $(shell pwd)
 
 modules:
